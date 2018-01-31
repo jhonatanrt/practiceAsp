@@ -10,15 +10,27 @@ namespace practiceNet.Controllers
 {
     public class MoviesController : Controller
     {
+
+        public ActionResult Index()
+        {
+            var movies = GetMovies();
+            return View(movies);
+        }
+
+
         //
         // GET: /Movies/Random
 
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Sherk!" };
+            
+
             //ViewData["Movie"] = movie;
             //ViewBag.RandomMovie = movie;
 
+
+            //******* modo de enviar viewmodel ***************
             //var viewResult = new ViewResult();
 
             var customers = new List<Customer>
@@ -31,10 +43,14 @@ namespace practiceNet.Controllers
             var viewModel = new RandomMovieViewModel
             {
                 Movie = movie,
-                Customers =customers
+                Customers = customers
             };
 
             return View(viewModel);
+
+            //*************************************************
+
+            
             //return Content("HELLO WORLD");
             //return HttpNotFound();
             //return RedirectToAction("Index", "Home");
@@ -50,23 +66,33 @@ namespace practiceNet.Controllers
             return Content("id -> " + movieId);
         }
 
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
+        //public ActionResult Index(int? pageIndex, string sortBy)
+        //{
+        //    if (!pageIndex.HasValue)
+        //        pageIndex = 1;
 
-            if (string.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
+        //    if (string.IsNullOrWhiteSpace(sortBy))
+        //        sortBy = "Name";
 
 
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
-        }
+        //    return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+        //}
 
         //{month:regex(\\d{4})}
         [Route("movies/released/{year}/{month}")]
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + " / " + month);
+        }
+
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Id = 1, Name = "Sherk"},
+                new Movie { Id = 1, Name = "Wall-e"}
+            };
         }
     }
 }

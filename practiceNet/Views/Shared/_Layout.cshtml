@@ -1,5 +1,4 @@
-﻿@model practiceNet.ViewModels.RandomMovieViewModel
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -10,7 +9,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -29,8 +28,8 @@
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
-    @Html.Partial("_NavBar", Model.Movie)
+    </div>*@
+    @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
         <hr />
