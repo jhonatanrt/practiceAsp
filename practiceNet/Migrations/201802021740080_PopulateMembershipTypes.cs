@@ -16,6 +16,7 @@ namespace practiceNet.Migrations
         
         public override void Down()
         {
+
         }
     }
 }
