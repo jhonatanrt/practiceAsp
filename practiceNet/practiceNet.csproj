@@ -190,9 +190,26 @@
     <Compile Include="Migrations\201802262006095_ApplyAnnotationToCustomerName.Designer.cs">
       <DependentUpon>201802262006095_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803072206442_test.cs" />
+    <Compile Include="Migrations\201803072206442_test.Designer.cs">
+      <DependentUpon>201803072206442_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803072214253_AddBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\201803072214253_AddBirthdateToCustomer.Designer.cs">
+      <DependentUpon>201803072214253_AddBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803072255545_AddMovie.cs" />
+    <Compile Include="Migrations\201803072255545_AddMovie.Designer.cs">
+      <DependentUpon>201803072255545_AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803072256201_Genres.cs" />
+    <Compile Include="Migrations\201803072256201_Genres.Designer.cs">
+      <DependentUpon>201803072256201_Genres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -262,6 +279,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +309,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802262006095_ApplyAnnotationToCustomerName.resx">
       <DependentUpon>201802262006095_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803072206442_test.resx">
+      <DependentUpon>201803072206442_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803072214253_AddBirthdateToCustomer.resx">
+      <DependentUpon>201803072214253_AddBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803072255545_AddMovie.resx">
+      <DependentUpon>201803072255545_AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803072256201_Genres.resx">
+      <DependentUpon>201803072256201_Genres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

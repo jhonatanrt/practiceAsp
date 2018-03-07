@@ -31,7 +31,9 @@ namespace practiceNet.Controllers
         public ActionResult Details(int id)
         {
             //SingleOrDefault -> para seleccionar un objeto que concuerde con la condicional
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            //var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
+
             if (customer == null)
                 return HttpNotFound();
 
