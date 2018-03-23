@@ -15,6 +15,7 @@ namespace practiceNet.Models
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; }
         public byte MembershipTypeId { get; set; }
+        [Display(Name = "Fecha de nacimiento")]
         public DateTime? Birthdate { get; set; }
     }
 }                                                               

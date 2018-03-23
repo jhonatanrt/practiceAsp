@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using practiceNet.Models;
+using practiceNet.ViewModels;
 
 namespace practiceNet.Controllers
 {
@@ -21,6 +22,23 @@ namespace practiceNet.Controllers
         {
             _context.Dispose();
         }
+
+        public ActionResult New()
+        {
+            var membershiptypes = _context.MembershipType.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershiptypes
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(NewCustomerViewModel viewModel)
+        {
+            return View();
+        }
+
         // GET: Customers
         public ActionResult Index()
         {
