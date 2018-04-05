@@ -26,17 +26,39 @@ namespace practiceNet.Controllers
         public ActionResult New()
         {
             var membershiptypes = _context.MembershipType.ToList();
-            var viewModel = new NewCustomerViewModel
+            var viewModel = new CustomerForViewModel
             {
                 MembershipTypes = membershiptypes
             };
-            return View(viewModel);
+            return View("CustomerForm",viewModel);
         }
 
         [HttpPost]
-        public ActionResult Create(NewCustomerViewModel viewModel)
+        public ActionResult Create(Customer customer)
         {
-            return View();
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return RedirectToAction("Index","Customers");
+        }
+
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            if (customer.Id == 0){
+                _context.Customers.Add(customer);
+            } else {
+                var CustomerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                //Mapper.Map(customer, CustomerInDb);
+                CustomerInDb.Name = customer.Name;
+                CustomerInDb.MembershipTypeId = customer.MembershipTypeId;
+                CustomerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+                CustomerInDb.Birthdate = customer.Birthdate;
+
+            }
+            
+            _context.SaveChanges();
+            
+            return RedirectToAction("Index", "Customers");
         }
 
         // GET: Customers
@@ -56,6 +78,21 @@ namespace practiceNet.Controllers
                 return HttpNotFound();
 
             return View(customer);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var customers = _context.Customers.SingleOrDefault(c => c.Id == id);
+            if (customers == null)
+            {
+                return HttpNotFound();
+            }
+            var viewModel = new CustomerForViewModel
+            {
+                Customer = customers,
+                MembershipTypes = _context.MembershipType.ToList()
+            };
+            return View("CustomerForm", viewModel);
         }
     //    private IEnumerable<Customer> GetCustomers()
     //    {

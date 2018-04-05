@@ -6,7 +6,7 @@ using practiceNet.Models;
 
 namespace practiceNet.ViewModels
 {
-    public class NewCustomerViewModel
+    public class CustomerForViewModel
     {
         public IEnumerable<MembershipType> MembershipTypes { get; set; }
         public Customer Customer { get; set; }
