@@ -7,13 +7,13 @@ namespace practiceNet.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class test : IMigrationMetadata
+    public sealed partial class AddNameToMembershipType : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(test));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNameToMembershipType));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803072206442_test"; }
+            get { return "201806042253480_AddNameToMembershipType"; }
         }
         
         string IMigrationMetadata.Source

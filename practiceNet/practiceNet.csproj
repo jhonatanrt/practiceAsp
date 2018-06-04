@@ -170,10 +170,6 @@
     <Compile Include="Migrations\201801312112473_InitialModel.Designer.cs">
       <DependentUpon>201801312112473_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802011714541_InitialModel1.cs" />
-    <Compile Include="Migrations\201802011714541_InitialModel1.Designer.cs">
-      <DependentUpon>201802011714541_InitialModel1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201802011949438_AddIsSubscribedToCustomer.cs" />
     <Compile Include="Migrations\201802011949438_AddIsSubscribedToCustomer.Designer.cs">
       <DependentUpon>201802011949438_AddIsSubscribedToCustomer.cs</DependentUpon>
@@ -190,10 +186,6 @@
     <Compile Include="Migrations\201802262006095_ApplyAnnotationToCustomerName.Designer.cs">
       <DependentUpon>201802262006095_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803072206442_test.cs" />
-    <Compile Include="Migrations\201803072206442_test.Designer.cs">
-      <DependentUpon>201803072206442_test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201803072214253_AddBirthdateToCustomer.cs" />
     <Compile Include="Migrations\201803072214253_AddBirthdateToCustomer.Designer.cs">
       <DependentUpon>201803072214253_AddBirthdateToCustomer.cs</DependentUpon>
@@ -205,6 +197,14 @@
     <Compile Include="Migrations\201803072256201_Genres.cs" />
     <Compile Include="Migrations\201803072256201_Genres.Designer.cs">
       <DependentUpon>201803072256201_Genres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806042253480_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201806042253480_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201806042253480_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806042254398_SetnameMembershipTypes.cs" />
+    <Compile Include="Migrations\201806042254398_SetnameMembershipTypes.Designer.cs">
+      <DependentUpon>201806042254398_SetnameMembershipTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -297,9 +297,6 @@
     <EmbeddedResource Include="Migrations\201801312112473_InitialModel.resx">
       <DependentUpon>201801312112473_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802011714541_InitialModel1.resx">
-      <DependentUpon>201802011714541_InitialModel1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802011949438_AddIsSubscribedToCustomer.resx">
       <DependentUpon>201802011949438_AddIsSubscribedToCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,9 +309,6 @@
     <EmbeddedResource Include="Migrations\201802262006095_ApplyAnnotationToCustomerName.resx">
       <DependentUpon>201802262006095_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803072206442_test.resx">
-      <DependentUpon>201803072206442_test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803072214253_AddBirthdateToCustomer.resx">
       <DependentUpon>201803072214253_AddBirthdateToCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +317,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803072256201_Genres.resx">
       <DependentUpon>201803072256201_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806042253480_AddNameToMembershipType.resx">
+      <DependentUpon>201806042253480_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806042254398_SetnameMembershipTypes.resx">
+      <DependentUpon>201806042254398_SetnameMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
